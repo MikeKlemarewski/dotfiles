@@ -1,0 +1,9 @@
+source ~/.bashrc
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/mikek/.gvm/bin/gvm-init.sh" ]] && source "/Users/mikek/.gvm/bin/gvm-init.sh"
+
+# Setting PATH for Python 3.5
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
+export PATH
