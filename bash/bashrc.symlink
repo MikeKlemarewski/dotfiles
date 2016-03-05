@@ -96,9 +96,9 @@ function git_prompt() {
 
         if is_branch_dirty
         then
-            echo -e "on \033[48;5;198;38;5;16m $git_repo/$git_branch \033[0m 👎"
+            echo -e "on 🚧  \033[48;5;198;38;5;16m $git_repo/$git_branch \033[0m ⚒"
         else
-            echo -e "on \033[48;5;42;38;5;16m $git_repo/$git_branch \033[0m 👍"
+            echo -e "on ✨\033[38;5;48m $git_repo/$git_branch\033[0m✨ 🚀"
         fi
     fi
 }
