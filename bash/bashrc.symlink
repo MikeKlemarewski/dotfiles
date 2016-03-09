@@ -11,30 +11,17 @@ export GREP_OPTIONS='--color=auto' GREP_COLOR='0;35'
 export PATH=$PATH:~/local/bin
 export PATH=$PATH:/usr/local/mysql/bin:/usr/local/sbin
 
-# psql
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
-
-#export DYLD_LIBRARY_PATH=$DYDL_LIBRARY_PATH:/usr/local/mysql/lib
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
-
-export PS1="[\\A \\W] \$ "
 
 export PYTHONPATH=$PYTHONPATH:/Users/mikek/development/python:/usr/lib/python2.7/site-packages:/Users/mikek/development/portal_app/portal
 export DJANGO_SETTINGS_MODULE=portal.settings
 export SELENIUM_SERVER_JAR=/Users/mikek/development/selenium
 
-export ANDROID_HOME=/Users/mikek/devtools/android-sdk-macosx
+export ANDROID_HOME=~/devtools/android-sdk-macosx
 export ANDROID_SDK=$ANDROID_HOME
 export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME/platform-tools
 
-function is_git_dirty() {
-    if [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]]
-    then
-        return 0
-    else
-        return 1
-    fi
-}
+# Make bash prompt pretty!
 
 function get_repo_name() {
     basename `git rev-parse --show-toplevel`
@@ -52,11 +39,6 @@ function is_branch_dirty() {
         return 1
     fi
 }
-
-Yellow='\033[38;5;222m'
-Blue='\033[38;5;33m'
-My_Color='\[\033[48;5;28;38;5;16m\]'
-Color_Off='\033[0m'
 
 function git_prompt() {
     git rev-parse 2> /dev/null
@@ -76,6 +58,11 @@ function git_prompt() {
         fi
     fi
 }
+
+Yellow='\033[38;5;222m'
+Blue='\033[38;5;33m'
+My_Color='\[\033[48;5;28;38;5;16m\]'
+Color_Off='\033[0m'
 
 PS1="\\A $Yellow$(whoami)$Color_Off in $Blue\\w$Color_Off \$(git_prompt)\n\$ "
 
