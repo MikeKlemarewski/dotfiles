@@ -1,0 +1,26 @@
+alias ..='cd ..'
+alias ll='ls -lhAG'
+alias ls='ls -G'
+alias pg='ps aux | grep'
+alias ng='netstat -an | grep'
+alias hopen='cd ~; open .'
+
+# Work Stuff
+alias gp='grunt preview'
+
+alias ports="sudo lsof -i -P | grep -i 'listen'"
+
+# GIT and NPM stuff
+alias gco='git checkout'
+alias gcm='git commit'
+alias gst='git status'
+alias cleanbranches="git checkout master && git branch --merged master | grep -ve '^*' | grep -ve '^  master$' | xargs git branch -D"
+
+
+# Harp webserver
+alias harpserve="sudo harp multihost -p 80 /Users/mikek/Dropbox\ \(Personal\)/harp.io/apps"
+
+# Explain Shell Commands
+alias explain='history | tail -2 | head -1 | sed -e '"'"'s/^\ *[[:digit:]]*\ *//'"'"' | php -R "echo urlencode(\$argn);" | sed -e '"'"'s/^\(.*\)/\"http:\/\/www.explainshell.com\/explain?cmd=\1\"/g'"'"' | xargs -I{} open -a "/Applications/Google Chrome.app/" {}'
+
+alias with_circle='env CIRCLE_TOKEN=$(security find-generic-password -a CIRCLE_TOKEN -w) '
