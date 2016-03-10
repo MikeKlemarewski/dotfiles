@@ -4,7 +4,7 @@
 
 set -e
 
-ce $HOME/.dotfiles
+cd $HOME/.dotfiles
 
 # Install homebrew
 $HOME/.dotfiles/homebrew/install.sh 2>&1
