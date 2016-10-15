@@ -69,10 +69,7 @@ PS1="\\A $Yellow$(whoami)$Color_Off in $Blue\\w$Color_Off \$(git_prompt)\n\$ "
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/mikek/.gvm/bin/gvm-init.sh" ]] && source "/Users/mikek/.gvm/bin/gvm-init.sh"
-
-export NVM_DIR="/Users/mikek/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 export LOLCOMMITS_DEVICE="FaceTime HD Camera"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
