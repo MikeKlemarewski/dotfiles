@@ -15,7 +15,8 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -41,3 +42,21 @@ set autoindent
 
 syntax on
 colorscheme monokai
+" let g:airline_theme='base16_monokai'
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+let mapleader=','
+
+" To open a new empty buffer
+" This replaces :tabnew which I used to bind to this mapping
+nmap <leader>t :edit 
+nmap <leader>T :enew<cr>
+nmap <leader>l :bnext<CR>
+nmap <leader>h :bprevious<CR>
+nmap <leader>bq :bp <BAR> bd #<CR>
+nmap <leader>bl :ls<CR>
+
