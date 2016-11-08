@@ -49,7 +49,7 @@ let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-let mapleader=','
+let mapleader=' '
 
 " To open a new empty buffer
 " This replaces :tabnew which I used to bind to this mapping
