@@ -2,6 +2,7 @@ source ~/.bash_extras
 source ~/.aliases
 source ~/.git-completion.sh
 
+
 export PATH=~/bin:$PATH
 export HISTFILESIZE=500000
 export HISTSIZE=100000
@@ -17,9 +18,8 @@ export PYTHONPATH=$PYTHONPATH:/Users/mikek/development/python:/usr/lib/python2.7
 export DJANGO_SETTINGS_MODULE=portal.settings
 export SELENIUM_SERVER_JAR=/Users/mikek/development/selenium
 
-export ANDROID_HOME=~/devtools/android-sdk-macosx
-export ANDROID_SDK=$ANDROID_HOME
-export PATH=$PATH:$ANDROID_HOME:$ANDROID_HOME/platform-tools
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+chruby ruby-2.3.1
 
 # Make bash prompt pretty!
 
