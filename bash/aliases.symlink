@@ -15,7 +15,6 @@ alias gco='git checkout'
 alias gcm='git commit'
 alias gst='git status'
 alias cleanbranches="git checkout master && git branch --merged master | grep -ve '^*' | grep -ve '^  master$' | xargs git branch -D"
-alias gca="git branch | grep \* | grep -oE \"([0-9]+)\" | awk '{print \"[#\"\$1\"] \"}' | pbcopy && git commit -a"
 
 
 # Harp webserver
