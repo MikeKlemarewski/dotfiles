@@ -22,6 +22,7 @@ Plugin 'mtscout6/syntastic-local-eslint.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'scrooloose/nerdtree'
+Plugin 'gabesoft/vim-ags'
 
 
 " All of your Plugins must be added before the following line
@@ -43,6 +44,7 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+set backspace=indent,eol,start
 
 set autoindent
 
@@ -104,7 +106,6 @@ set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_loc_list_height = 5
 let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
 let g:syntastic_javascript_checkers = ['eslint']
 
 let g:syntastic_error_symbol = '❌'
@@ -141,10 +142,17 @@ nmap <leader>bl :BuffergatorOpen<cr>
 " Shared bindings from Solution #1 from earlier
 nmap <leader>T :enew<cr>
 nmap <leader>bq :bp <BAR> bd #<cr>
+nmap <leader>wq :w <cr>:bp <BAR> bd #<cr>
 " end buffergator
 
 " NerdTree
 nmap <C-n> :NERDTreeToggle<CR>
 " end NerdTree
+
+
+" Ags (Silver Searcher)
+nmap <leader>f :Ags 
+" end Ags
+
 
 set laststatus=2
