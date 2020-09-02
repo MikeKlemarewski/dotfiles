@@ -28,4 +28,7 @@ alias with_circle='env CIRCLE_TOKEN=$(security find-generic-password -a CIRCLE_T
 alias dc='docker-compose'
 alias frontend='docker-compose run frontend'
 alias backend='docker-compose run backend'
+alias cleandocker='docker system prune --filter "until=720h" --volumes'
+
+alias ngrok='~/development/ngrok'
 

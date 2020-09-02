@@ -15,10 +15,6 @@ export PATH=$PATH:~/Library/Python/2.7/bin/
 
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
 
-export PYTHONPATH=$PYTHONPATH:/Users/mikek/development/python:/usr/lib/python2.7/site-packages:/Users/mikek/development/portal_app/portal
-export DJANGO_SETTINGS_MODULE=portal.settings
-export SELENIUM_SERVER_JAR=/Users/mikek/development/selenium
-
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 chruby ruby-2.3.1
 
