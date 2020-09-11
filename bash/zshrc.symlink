@@ -46,17 +46,19 @@ function git_prompt() {
 
     if [ $? -eq 0 ]
     then
-        local git_repo=$(get_repo_name)
-        local git_branch=$(get_git_branch_name)
+        local git_repo=get_repo_name
+        local git_branch=get_git_branch_name
 
         local git_prompt
 
         if is_branch_dirty
         then
-            echo -e "on 🚧  \033[48;5;198;38;5;16m $git_repo/$git_branch \033[0m ⚒"
+            echo -e " 🚧  %F{red}$(get_repo_name)/$(get_git_branch_name)%f ⚒"
         else
-            echo -e "on ✨\033[38;5;48m $git_repo/$git_branch\033[0m✨ 🚀"
+            echo -e " ✨ %F{green}$(get_repo_name)/$(get_git_branch_name)%f ✨ 🚀"
         fi
+    else
+        echo -e ""
     fi
 }
 
@@ -65,7 +67,7 @@ Blue='\033[38;5;33m'
 My_Color='\[\033[48;5;28;38;5;16m\]'
 Color_Off='\033[0m'
 
-PS1="\\A $Yellow$(whoami)$Color_Off in $Blue\\w$Color_Off \$(git_prompt)\n\$ "
+PROMPT="%F{yellow}%~%f $(git_prompt) "
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
