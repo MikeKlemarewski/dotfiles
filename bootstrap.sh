@@ -110,7 +110,7 @@ install_dotfiles
 if [ "$(uname -s)" == "Darwin" ]
 then
     info "installing dependencies"
-    if source ./install.sh > /tmp/dotfiles-install 2>&1
+    if source ./install.sh 2>&1
     then
       success "dependencies installed"
     else

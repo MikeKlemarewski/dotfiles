@@ -6,8 +6,8 @@ source ~/.bash_extras
 source ~/.aliases
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/mikeklemarewski/.oh-my-zsh"
-export DEFAULT_USER='mikeklemarewski'
+export ZSH="/Users/mikeklem/.oh-my-zsh"
+export DEFAULT_USER='mikeklem'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

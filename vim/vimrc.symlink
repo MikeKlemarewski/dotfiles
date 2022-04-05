@@ -23,6 +23,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'gabesoft/vim-ags'
+Plugin 'morhetz/gruvbox'
 
 
 " All of your Plugins must be added before the following line
