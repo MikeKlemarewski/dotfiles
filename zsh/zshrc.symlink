@@ -2,7 +2,6 @@
 #
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-source ~/.bash_extras
 source ~/.aliases
 
 # Path to your oh-my-zsh installation.
@@ -112,11 +111,5 @@ plugins=(
   gitfast
   dotenv
   osx
-  rake
-  rbenv
-  ruby
 )
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-export PATH="/usr/local/opt/helm@2/bin:$PATH"
